@@ -9,10 +9,8 @@ public class StringUtil {
 	public final static String FORMAT_LINE_NUMBER = "%LINE_NUMBER";
 
 	public static String format(String text, LogInfo logInfo) {
-		text.replace(FORMAT_FILE, logInfo.getFileName());
-		text.replace(FORMAT_CLASS, logInfo.getClassName());
-		text.replace(FORMAT_METHOD, logInfo.getMethodName());
-		text.replace(FORMAT_LINE_NUMBER, String.valueOf(logInfo.getLineNumber()));
+		text = text.replace(FORMAT_FILE, logInfo.getFileName()).replace(FORMAT_CLASS, logInfo.getClassName()).replace(FORMAT_METHOD, logInfo.getMethodName())
+				.replace(FORMAT_LINE_NUMBER, String.valueOf(logInfo.getLineNumber()));
 
 		return text;
 	}
